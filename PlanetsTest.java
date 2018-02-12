@@ -37,7 +37,7 @@ public class PlanetsTest {
 			System.out.println("Type 2 to find a planet by it's colour");
 			System.out.println("Type 3 to create an object");
 			System.out.println("Type 4 to display the planet with greater temperature in our solar system");
-			System.out.println("Type 5 to change a characteristic of a planet");
+			System.out.println("Type 5 to change a characteristic of a planet\n");
 			
 			//Diavazoume apo to xristi thn epilogh tou gia to menu
 			int choice = scanner.nextInt(); 
@@ -60,7 +60,7 @@ public class PlanetsTest {
 			 * H metavliti colour, dinei to posoi planites exoun to dwthen xrwma
 			 */
 			else if (choice == 2 ){
-				System.out.println("Please insert the colour of the planet: ");
+				System.out.println("Please insert the colour of the planet: \n");
 				String plan = scanner.next();
 				int colour=0;
 				for(Characteristics characts:Characteristics.chars) {
@@ -85,7 +85,7 @@ public class PlanetsTest {
 			 * antikeimeno.
 			 */
 			else if(choice==3) {
-				System.out.println("Please insert the name of the new Planet");
+				System.out.println("Please insert the name of the new Planet\n");
 				String newPlanet = scanner.next();
 				
 				System.out.println("Please state whether the planet has been visited by a man-made object (answer with true or false)");
@@ -126,12 +126,12 @@ public class PlanetsTest {
 			 */
 			else if (choice == 5) {
 				System.out.println("Please insert to which planet you want to change the temperature: \n1 for Hermis\n2 for Afrodite\n3 for Earth\n"
-						+ "4 for Ares\n5 for Dias\n6 for Kronos\n7 for Uranus\n8 for Poseidon");
+						+ "4 for Ares\n5 for Dias\n6 for Kronos\n7 for Uranus\n8 for Poseidon\n");
 				int index = scanner.nextInt();
 				for (Characteristics pl: Characteristics.chars){
 					if (pl != null)
 						if (pl.getPlanets().getId() == index) {
-							System.out.println("Please insert the new temperature");
+							System.out.println("Please insert the new temperature\n");
 							double newTemp = scanner.nextDouble();
 							pl.setTemperature(newTemp);
 						}
@@ -141,7 +141,7 @@ public class PlanetsTest {
 			
 			//Ean dwthei timh ektos range, dinei mhnyma error kai epistrefei sto menu
 			else {
-				System.err.println("You didn't enter the correct format (numbers between 1 and 5)");
+				System.err.println("You didn't enter the correct format (numbers between 1 and 5)\n");
 			}
 		}
 	}
